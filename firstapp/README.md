@@ -2,7 +2,6 @@
 
 A new Flutter project.
 
-Fultter + firebase
 
 ## Getting Started
 
