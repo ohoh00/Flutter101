@@ -10,10 +10,6 @@ Stateful Widget  คือ Stateless Widget ที่สามารถเปล
 
 Scaffold เปรียบเสมือนการวางโครงสร้างเริ่ม้นให้กับแอพ เช่น appbar , center , column
 
-BuildContext 
-
-![Image](https://benzneststudios.com/blog/wp-content/uploads/2019/02/2-3.png)
-
-คือ object ที่เก็บ reference ของ Widget
+BuildContext คือ object ที่เก็บ reference ของ Widget
 
 Key คือ id เพื่อที่ระบุตัวของ Widget
