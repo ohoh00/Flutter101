@@ -1,5 +1,6 @@
 import 'package:firstapp/Register.dart';
 import 'package:flutter/material.dart';
+import 'package:firstapp/Reads.dart';
 
 void main() => runApp(
     Myapp()); //runapp ซึ่งจะรันได้ต้องเลือกของในวงเล็บเป็น object เท่านั้น
@@ -70,9 +71,21 @@ class _LoginpageState extends State<Loginpage> {
     return OutlineButton(
       child: Text('Sign Up'),
       onPressed: () {
-        MaterialPageRoute materialPageRoute = MaterialPageRoute(builder: (BuildContext context) => Register()); 
-        Navigator.of(context).push(materialPageRoute); 
-      },//ใน {} คือส่วนของ Action , BuildContext คือการสร้างสะพานเชื่อม
+        MaterialPageRoute materialPageRoute =
+            MaterialPageRoute(builder: (BuildContext context) => Register());
+        Navigator.of(context).push(materialPageRoute);
+      }, //ใน {} คือส่วนของ Action , BuildContext คือการสร้างสะพานเชื่อม
+    );
+  }
+
+  Widget read() {
+    return RaisedButton(
+      child: Text('read'),
+      onPressed: () {
+        MaterialPageRoute materialPageRoute =
+            MaterialPageRoute(builder: (BuildContext context) => Testread());
+        Navigator.of(context).push(materialPageRoute);
+      },
     );
   }
 
@@ -83,7 +96,8 @@ class _LoginpageState extends State<Loginpage> {
         SizedBox(
           width: 4.0,
         ),
-        signUp()
+        signUp(),
+        read()
       ],
       mainAxisSize: MainAxisSize.min,
     );
@@ -101,6 +115,7 @@ class _LoginpageState extends State<Loginpage> {
                 radius: 0.8)),
         child: Center(
           child: Column(
+            //mainAxisSize ให้พื้นที่ลดเหลือแค่ที่จำเป็น เช่น เท่ากับจำนวนตัวอักษร
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               showlogo(),
